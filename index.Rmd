@@ -5,4 +5,13 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+
+This data from [this repo](https://raw.githubusercontent.com/alex/nyt-2020-election-scraper/master/all-state-changes.csv) and shows the candidate leads over time.
+
+Here is what the result looked like at the end of the vote tallies:
+
+```{r}
+vote_diff_plot
 ```

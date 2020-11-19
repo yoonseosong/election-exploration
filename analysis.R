@@ -26,8 +26,6 @@ data <- raw_data %>%
                    trailing_candidate_votes),
          trump_votes = total_votes_count - biden_votes)
 
-# How many reported timestamps exist for each state?
-
 # When did Biden take the lead in Georgia?
 ga_lead_time <- data %>% 
   filter(state == "Georgia", leading_candidate_name == "Biden") %>% 
@@ -52,7 +50,3 @@ vote_diff_plot <- ggplot(vote_diff) +
 
 vote_pct_plot <- ggplot(vote_diff) +
   geom_col(mapping = aes(x = pct_diff, y = reorder(state, pct_diff)))
-
-# How do total votes change over time (by candidate)?
-
-# 
